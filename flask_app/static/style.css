@@ -1,0 +1,143 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #cee1ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #d8e5f7;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 4px 8px   rgba(2, 100, 116, 0.911);
+    text-align: center;
+}
+
+h1 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Button colors */
+button[type="submit"] {
+    background-color: #111f22;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+button[type="button"] {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+button[type="button"]:hover {
+    background-color: #138496;
+}
+
+button.delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+button.clear {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+button.clear:hover {
+    background-color: #e0a800;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+li button {
+    margin-left: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 60%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

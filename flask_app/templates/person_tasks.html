@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Tasks for {{ person_name }}</h1>
+<ul>
+    {% for task in tasks %}
+    <li>
+        {% if task.completed %}
+        <s>{{ task.description }}</s>
+        {% else %}
+        {{ task.description }}
+        {% endif %}
+        <form action="{{ url_for('complete', task_id=loop.index0) }}" method="POST" style="display: inline;">
+            <button type="submit">Complete</button>
+        </form>
+        <form action="{{ url_for('edit', task_id=loop.index0) }}" method="GET" style="display: inline;">
+            <button type="submit">Edit</button>
+        </form>
+        <form action="{{ url_for('delete', task_id=loop.index0) }}" method="POST" style="display: inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}">Back to To-Do List</a>
+{% endblock %}
